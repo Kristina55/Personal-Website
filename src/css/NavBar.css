@@ -1,0 +1,20 @@
+nav {
+  height: 30px;
+}
+
+.navBarStyle {
+  position: fixed;
+  top: 14px;
+  right: 50px;
+  z-index: 3;
+}
+
+.navBarStyle > a {
+  padding-right: 10px;
+  text-decoration: none;
+  color: var(--primaryText);
+}
+
+.navBarStyle > a:hover {
+  color: gray;
+}

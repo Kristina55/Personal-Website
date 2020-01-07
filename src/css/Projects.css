@@ -1,0 +1,142 @@
+.projects-style {
+  height: 500px;
+}
+
+.projects-background {
+  margin: 40px;
+  background-color: var(--primaryBg);
+}
+
+.projects-style > h1 {
+  position: absolute;
+  height: calc(100vh - 60px);
+  font-size: 80px;
+  top: 150px;
+  left: 200px;
+  height: auto;
+  color: var(--primaryText);
+  /* color: var(--secondaryText); */
+}
+
+.projects-style > h2 {
+  position: absolute;
+  height: calc(100vh - 60px);
+  font-size: 20px;
+  top: 250px;
+  left: 200px;
+  height: auto;
+  font-family: Gilroy, sans-serif;
+  /* color: var(--primaryText); */
+  color: var(--primarySmallText);
+}
+.projects-style > h2 > i {
+  font-family: "Libre Baskerville", serif;
+  font-weight: normal;
+}
+
+.projects-style > h3 {
+  position: absolute;
+  height: calc(100vh - 60px);
+  font-size: 18px;
+  top: 275px;
+  left: 200px;
+  height: auto;
+  font-family: Gilroy, sans-serif;
+  /* color: #edb10b; */
+  color: var(--primarySmallText);
+}
+.projects-style > h3 > i {
+  font-family: "Libre Baskerville", serif;
+  font-weight: normal;
+}
+.img-style {
+  max-width: 100px;
+}
+
+.card {
+  padding: 0px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--cardImage);
+  margin-bottom: 21px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-body:hover {
+  background-color: #dbaa30;
+}
+
+.card:hover .project-url {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card:hover .img-description {
+  visibility: visible;
+  opacity: 1;
+}
+
+.project-url {
+  position: absolute;
+  top: 120px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  visibility: visible;
+  opacity: 0;
+  font-size: 20px;
+
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.img-description {
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  visibility: visible;
+  opacity: 0;
+  font-size: 40px;
+
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.project-name {
+  color: var(--primaryAboutTextColor);
+  border-bottom: 1px solid #9e9e9e;
+}
+.project-description {
+  font-family: "Helvetica Neue";
+  margin-top: 30px;
+  border: 1px solid#cacaca;
+  padding: 25px;
+  color: var(--primaryAboutTextColor);
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 550px) {
+  .projects-style > h1 {
+    left: 30px;
+    font-size: 55px;
+  }
+  .projects-style > h2 {
+    left: 30px;
+    font-size: 16px;
+  }
+
+  .projects-style > h3 {
+    left: 30px;
+    font-size: 16px;
+  }
+  .card {
+    max-width: 350px;
+    max-height: 300px;
+  }
+  .video {
+    max-width: 300px;
+  }
+}

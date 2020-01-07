@@ -1,0 +1,138 @@
+body {
+  font-family: "Baloo Da", cursive;
+}
+nav {
+  height: 0px !important;
+}
+html.color-theme-in-transition,
+html.color-theme-in-transition *,
+html.color-theme-in-transition *:before,
+html.color-theme-in-transition *:after {
+  transition: all 650ms !important;
+  transition-delay: 0 !important;
+}
+
+html {
+  /* global colors */
+  --primaryTheme: #ffbf0f;
+  --primaryBg: #f2f2f2;
+  --primaryText: #212121;
+  --primaryTextDescription: black;
+  --secondaryText: black;
+  --primaryButtonText: black;
+  --primaryBorderBg: #efefef;
+  --primaryAboutTextColor: black;
+  --activeSelectionBg: rgba(162, 162, 162, 0.1);
+  --primaryShadowBg: rgba(204, 204, 204, 0.7);
+  --primarySmallText: #edb10b;
+  --primaryButtonTransparent: #0000008f;
+  --primaryBorder: black;
+  --cardImage: url(https://i.pinimg.com/originals/d7/63/61/d7636123c619f2b426ae7cbeabf336fb.png);
+}
+
+html[data-theme="dark"] {
+  /* global colors */
+  --primaryTheme: darkslategray;
+  --primaryBg: #1a1a1d;
+  --primaryText: #ffbf0f;
+  --primaryTextDescription: #ffffffbf;
+  --secondaryText: white;
+  --primaryButtonText: #fff;
+  --primaryAboutTextColor: #ffffffa8;
+  --primaryBorderBg: #292929;
+  --activeSelectionBg: rgba(0, 0, 0, 0.18);
+  --primaryShadowBg: rgba(8, 8, 8, 0.7);
+  --primarySmallText: #ffffffa8;
+  --primaryButtonTransparent: #f8bf459e;
+  --primaryBorder: white;
+  /* it is working but I need to figure it out how to have different images */
+  --cardImage: url(https://ak3.picdn.net/shutterstock/videos/17589583/thumb/1.jpg);
+}
+
+.App {
+  text-align: center;
+}
+.home-page-background {
+  height: calc(100vh - 0px);
+  background-color: var(--primaryBg);
+}
+
+#background {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  background-color: var(--primaryTheme);
+  z-index: 1;
+}
+
+#home-content {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  text-align: center;
+  font-size: 130px;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--primaryText);
+}
+
+.header-button {
+  padding: 0 15px;
+  font-family: "Libre Baskerville", serif;
+  height: 32px;
+  background: var(--primaryBg);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primaryButtonText);
+  border-radius: 20px;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+.homepage-description {
+  color: var(--primaryTextDescription);
+  font-size: 20px;
+}
+
+.homepage-div-button {
+  margin-top: -90px;
+  height: 0px;
+}
+.homepage-button {
+  border-top: 1px solid var(--primaryBorder);
+  border-bottom: 1px solid var(--primaryBorder);
+  font-style: italic;
+  color: var(--primaryTextDescription);
+  padding: 0px 10px 0px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.homepage-button:hover {
+  text-decoration: none;
+  color: var(--primaryButtonTransparent);
+}
+@media only screen and (max-width: 550px) {
+  #home-content {
+    font-size: 95px;
+  }
+  .homepage-div-button {
+    margin-top: -50px;
+  }
+  .header-button {
+    bottom: 12px;
+  }
+  .homepage-description {
+    font-size: 15px;
+  }
+
+  .homepage-button {
+    font-size: 18px;
+  }
+}
