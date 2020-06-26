@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
+import resume from "../files/KristinaGjozev.pdf";
 
 class HomePage extends Component {
   constructor(props) {
@@ -30,11 +31,14 @@ class HomePage extends Component {
             creating clean & user-friendly experiences.
           </p>
           <div className="homepage-div-button">
-            <Link to="projects" className="homepage-button">
+            {/* <Link to="projects" className="homepage-button">
               Check my work
-              {/* <button ">Check my work</button> */}
-            </Link>
+            </Link> */}
+            <a href={resume} className="homepage-button">
+              Resume
+            </a>
           </div>
+
           <button className="header-button" onClick={this.toggleTheme}>
             <i>Change theme</i>
           </button>
